@@ -1,73 +1,151 @@
 
 const fs = require('fs');
-const yargs = require('yargs');//for commandline args
+const yargs = require('yargs'); //for commandline args
+const express = require('express');
+const bodyParser = require('body-parser');
 const LoanDataArr = JSON.parse(fs.readFileSync('./mydata.json'));
-// Keep a counter for number of current active loans
-var ActiveLoans = [];
 
-// Keep an array of blacklisted ids in the start.
-var BlacklistedIds = []
+const app = express();
+port = 3000;
+app.use(bodyParser.urlencoded({ extended: false }));
 
-// Keep an array of blacklisted ids that give some kind of profit and allow them for 1 time at least. (Calculation of profit ratios for these would be Total repayable amount - principal / principal amount)
-var BlacklistedIdsProfit = []
+app.use(bodyParser.json());
 
-// Current balance
-var CurrentBalance = 0;
+const output = [];
 
-// Profit made
-var Profit;
+app.post('/run', (req, res) => {
+    const { n, k } = req.body;
+    lendingOracle(n, k);
+    res.status(201).send({
+        message: 'Request Succesful!',
+        data: output
+    })
+});
 
-// Make a list of current active loans, also add the profit ratios
-var ActiveLoans = []
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
 
-//Input Var N and K
-var n = 5;
-var k = 10;
+function lendingOracle(n, k) {
+    // Keep a counter for number of current active loans
+    var ActiveLoans = [];
 
-CurrentBalance = n;
-var map = {"01": [],"02":[],"03": [],"04":[],"05": [],"06":[],"07": [],"08":[],"09": [],"10":[],"11": [],"12":[] };
-var keys = ["01", "02", "03","04","05","06","07","08","09","10","11","12"];
-for (var i = 0; i < LoanDataArr.length; i++) {
-    LoanDataArr[i]["Profit"] = LoanDataArr[i]["repaid_amount"] - LoanDataArr[i]["principal"];
-    
-    if (!LoanDataArr[i].repayments.length) BlacklistedIds.push(LoanDataArr[i].customer_id);
-    else {
-        const diffInMs = new Date(LoanDataArr[i].repayments[LoanDataArr[i].repayments.length - 1].date) - new Date(LoanDataArr[i].disbursement_date)
-        const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
-        if (diffInDays > 90) 
-        { 
-            BlacklistedIds.push(LoanDataArr[i].customer_id);
-            //active date of repayment in under 90 days
+    // Keep an array of blacklisted ids in the start.
+    var BlacklistedIds = []
 
-            let temp = LoanDataArr[i].repayments;
-            temp.sort((a, b) => new Date(b.date) - new Date(a.date))
-            for(z=0; z<temp.length; z++){
-                if(new Date(temp[z].date) - new Date(LoanDataArr[i].disbursement_date) <= 90) 
-                {
-                    LoanDataArr[i].repayments.push({"date": temp[z].date})
-                    break
+    // Keep an array of blacklisted ids that give some kind of profit and allow them for 1 time at least. (Calculation of profit ratios for these would be Total repayable amount - principal / principal amount)
+    var BlacklistedIdsProfit = []
+
+    // Current balance
+    var CurrentBalance = 0;
+    var Profit;
+
+
+    //Input Var N and K
+    // console.log(n,k);
+    console.log(LoanDataArr.length);
+    CurrentBalance = n;
+    var map = { "01": [], "02": [], "03": [], "04": [], "05": [], "06": [], "07": [], "08": [], "09": [], "10": [], "11": [], "12": [] };
+    var keys = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+    for (var i = 0; i < LoanDataArr.length; i++) {
+        LoanDataArr[i]["Profit"] = LoanDataArr[i]["repaid_amount"] - LoanDataArr[i]["principal"];
+
+        if (!LoanDataArr[i].repayments.length) { BlacklistedIds.push(LoanDataArr[i].customer_id); LoanDataArr.splice(i, 1); continue; }//get all the blacklisted IDs and remove them 
+        else {
+            const diffInMs = new Date(LoanDataArr[i].repayments[LoanDataArr[i].repayments.length - 1].date) - new Date(LoanDataArr[i].disbursement_date)//get all the black listed ids that can be run atleast once
+            const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+            if (diffInDays > 90) {
+                BlacklistedIds.push(LoanDataArr[i].customer_id);
+                //active date of repayment in under 90 days
+
+                let temp = LoanDataArr[i].repayments;
+                temp.sort((a, b) => new Date(b.date) - new Date(a.date))
+                for (z = 0; z < temp.length; z++) {
+                    if (new Date(temp[z].date) - new Date(LoanDataArr[i].disbursement_date) <= 90) {
+                        LoanDataArr[i].repayments.push({ "date": temp[z].date })
+                        break
+                    }
                 }
             }
         }
+        // if(LoanDataArr[i]==undefined)console.log(i);
+        map[LoanDataArr[i].disbursement_date.split("-")[1]].push(LoanDataArr[i]);
     }
-    map[LoanDataArr[i].disbursement_date.split("-")[1]].push(LoanDataArr[i]);
+    console.log(LoanDataArr.length);
+    console.log(BlacklistedIds.length);
 
-}
 
-currentLoans = []
-for(let month of keys){
-    map[month].sort((a, b) => b.Profit - a.Profit);
-    for(let j = 0; j < k; j++){
-        if(map[month][j].profit > 0) currentLoans.push(map[months][j])
-    }
-    currentLoans.sort((a, b) => new Date(a.repayments[a.repayments.length - 1].date) - new Date(b.repayments[b.repayments.length - 1].date));
+    // currentLoans = []
+    // for(let month of keys){
+    //    console.log(map[month].size)
+    //     map[month].sort((a, b) => b.Profit - a.Profit);
+    //     for(let j = 0; j < k; j++){
+    //         if(!map[month][j].Profit)console.log("ok");
+    //         if(map[month][j].Profit && map[month][j].Profit > 0) currentLoans.push(map[month][j])
+    //     }
+    //     currentLoans.sort((a, b) => new Date(a.repayments[a.repayments.length - 1].date) - new Date(b.repayments[b.repayments.length - 1].date));
+
+    // }
+    currentloans = [];
+    allloans = [];
+    currentamount = [];
+    currentday = 1;
+    allprofit = 0;
+
+    for (day =1; day < 365; day++) {
+        
+        for (i1 = 0; i1 < LoanDataArr.length; i1++) {
+            // console.log(currentloans.length <= k ,CurrentBalance > 0 , (CurrentBalance - LoanDataArr[i].principal),CurrentBalance ,typeof CurrentBalance );
+            while (currentloans.length <= k && CurrentBalance > 0 && CurrentBalance - LoanDataArr[i1].principal > 0 && LoanDataArr[i1]) {
+                currentloans.push(LoanDataArr[i1]);
+                console.log("ok");
+                CurrentBalance -=LoanDataArr[i1].principal;
+                allloans.push(LoanDataArr[i1].application_id);
+                i1++;
+            }
+            // console.log(dateFromDay(2021,1));
+            for ( i2=0;i2<currentloans.length;i2++) {
     
+                // console.log(day, dateFromDay(2021,day) , new Date(currentloans[i2].repayments[currentloans[i2].repayments.length - 1].date).toDateString());
+                // console.log(currentloans[i]);
+                if(new Date(currentloans[i2].repayments[currentloans[i2].repayments.length - 1].date).getFullYear()==2021)
+                if (dateFromDay(day, 2021) == new Date(currentloans[i2].repayments[currentloans[i2].repayments.length - 1].date).toDateString()) {
+                    console.log("hello");
+                    removeA(currentloans, currentloans[i2]);
+                    allprofit += currentloans[i2].Profit;
+                    CurrentBalance += currentloans[i2].repaid_amount;
+
+                }
+            }
+        }
+// console.log("day",day,allloans.length,currentloans.length);
+    }
+console.log(allloans);
+// output=allloans;
 }
+
+function dateFromDay(year, day) {
+    // console.log(new Date(year, 0, day).toDateString());
+    return new Date(year, 0, day).toDateString();
+}
+function removeA(arr) {
+    var what, a = arguments, L = a.length, ax;
+    while (L > 1 && arr.length) {
+        what = a[--L];
+        while ((ax = arr.indexOf(what)) !== -1) {
+            arr.splice(ax, 1);
+        }
+    }
+    return arr;
+}
+// **** Additional comments about algorithm and further optimisation *******
+
+
 // Maintains array sorted according to profit, another sorted according to repayment date
 // Sort according to the month, date, profit
 // Set a goal : x loans per day - See to it that the balance doesnt become negative
 // Each day check if any repayments are to be done today. Check if any loan is completed and to be deleted. Take x loans.
-// If tried to exceed K, ignore the loan, continue. 
+// If tried to exceed K, ignore the loan, continue.
 
 
 // Additionally, currently not required but for file upload optimisation and optimal read through we can use soomething like this too

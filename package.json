@@ -10,6 +10,9 @@
   "author": "Anika Tibrewala",
   "license": "ISC",
   "dependencies": {
-    "yargs": "^17.3.1"
+    "yargs": "^17.3.1",
+    "body-parser": "^1.19.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2"
   }
 }
