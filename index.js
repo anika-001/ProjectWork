@@ -6,7 +6,7 @@ const bodyParser = require('body-parser');
 const LoanDataArr = JSON.parse(fs.readFileSync('./mydata.json'));
 
 const app = express();
-port = 3000;
+PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
@@ -22,8 +22,8 @@ app.post('/run', (req, res) => {
     })
 });
 
-app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });
 
 function lendingOracle(n, k) {
