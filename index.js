@@ -42,8 +42,7 @@ function lendingOracle(n, k) {
 
 
     //Input Var N and K
-    // console.log(n,k);
-    console.log(LoanDataArr.length);
+
     CurrentBalance = n;
     var map = { "01": [], "02": [], "03": [], "04": [], "05": [], "06": [], "07": [], "08": [], "09": [], "10": [], "11": [], "12": [] };
     var keys = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
@@ -68,49 +67,32 @@ function lendingOracle(n, k) {
                 }
             }
         }
-        // if(LoanDataArr[i]==undefined)console.log(i);
+  
         map[LoanDataArr[i].disbursement_date.split("-")[1]].push(LoanDataArr[i]);
     }
-    console.log(LoanDataArr.length);
-    console.log(BlacklistedIds.length);
 
-
-    // currentLoans = []
-    // for(let month of keys){
-    //    console.log(map[month].size)
-    //     map[month].sort((a, b) => b.Profit - a.Profit);
-    //     for(let j = 0; j < k; j++){
-    //         if(!map[month][j].Profit)console.log("ok");
-    //         if(map[month][j].Profit && map[month][j].Profit > 0) currentLoans.push(map[month][j])
-    //     }
-    //     currentLoans.sort((a, b) => new Date(a.repayments[a.repayments.length - 1].date) - new Date(b.repayments[b.repayments.length - 1].date));
-
-    // }
     currentloans = [];
     allloans = [];
     currentamount = [];
     currentday = 1;
     allprofit = 0;
-
+//go day wise
     for (day =1; day < 365; day++) {
-        
+        //takeloan aplications
         for (i1 = 0; i1 < LoanDataArr.length; i1++) {
-            // console.log(currentloans.length <= k ,CurrentBalance > 0 , (CurrentBalance - LoanDataArr[i].principal),CurrentBalance ,typeof CurrentBalance );
             while (currentloans.length <= k && CurrentBalance > 0 && CurrentBalance - LoanDataArr[i1].principal > 0 && LoanDataArr[i1]) {
                 currentloans.push(LoanDataArr[i1]);
-                console.log("ok");
+          
                 CurrentBalance -=LoanDataArr[i1].principal;
                 allloans.push(LoanDataArr[i1].application_id);
                 i1++;
             }
-            // console.log(dateFromDay(2021,1));
+            //if the loan is repaying today, repay, add the profit to main balance and cotinue.
             for ( i2=0;i2<currentloans.length;i2++) {
-    
-                // console.log(day, dateFromDay(2021,day) , new Date(currentloans[i2].repayments[currentloans[i2].repayments.length - 1].date).toDateString());
-                // console.log(currentloans[i]);
+
                 if(new Date(currentloans[i2].repayments[currentloans[i2].repayments.length - 1].date).getFullYear()==2021)
                 if (dateFromDay(day, 2021) == new Date(currentloans[i2].repayments[currentloans[i2].repayments.length - 1].date).toDateString()) {
-                    console.log("hello");
+              
                     removeA(currentloans, currentloans[i2]);
                     allprofit += currentloans[i2].Profit;
                     CurrentBalance += currentloans[i2].repaid_amount;
@@ -118,17 +100,15 @@ function lendingOracle(n, k) {
                 }
             }
         }
-// console.log("day",day,allloans.length,currentloans.length);
+
     }
 console.log(allloans);
-// output=allloans;
 }
 
-function dateFromDay(year, day) {
-    // console.log(new Date(year, 0, day).toDateString());
+function dateFromDay(year, day) {//gives date from a given day of the year in number i.e. 3 -> Wed Jan 03 2021
     return new Date(year, 0, day).toDateString();
 }
-function removeA(arr) {
+function removeA(arr) { //remove array index of given vallue.
     var what, a = arguments, L = a.length, ax;
     while (L > 1 && arr.length) {
         what = a[--L];
@@ -138,6 +118,10 @@ function removeA(arr) {
     }
     return arr;
 }
+
+
+
+
 // **** Additional comments about algorithm and further optimisation *******
 
 
