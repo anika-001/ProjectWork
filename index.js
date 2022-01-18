@@ -18,7 +18,7 @@ app.post('/run', (req, res) => {
     lendingOracle(n, k);
     res.status(201).send({
         message: 'Request Succesful!',
-        data: output
+        data: allloans
     })
 });
 
@@ -77,10 +77,11 @@ function lendingOracle(n, k) {
     currentday = 1;
     allprofit = 0;
 //go day wise
+i1 = 0;
     for (day =1; day < 365; day++) {
         //takeloan aplications
-        for (i1 = 0; i1 < LoanDataArr.length; i1++) {
-            while (currentloans.length <= k && CurrentBalance > 0 && CurrentBalance - LoanDataArr[i1].principal > 0 && LoanDataArr[i1]) {
+        if ( i1 < LoanDataArr.length) {
+            while (currentloans.length <= k && CurrentBalance > 0 && CurrentBalance - LoanDataArr[i1].principal > 0 && LoanDataArr[i1] && new Date(LoanDataArr[i1].repayments[LoanDataArr[i1].repayments.length - 1].date).getFullYear()==2021) {
                 currentloans.push(LoanDataArr[i1]);
           
                 CurrentBalance -=LoanDataArr[i1].principal;
@@ -89,20 +90,22 @@ function lendingOracle(n, k) {
             }
             //if the loan is repaying today, repay, add the profit to main balance and cotinue.
             for ( i2=0;i2<currentloans.length;i2++) {
-
+                
                 if(new Date(currentloans[i2].repayments[currentloans[i2].repayments.length - 1].date).getFullYear()==2021)
-                if (dateFromDay(day, 2021) == new Date(currentloans[i2].repayments[currentloans[i2].repayments.length - 1].date).toDateString()) {
-              
-                    removeA(currentloans, currentloans[i2]);
+                if (day === dayoftheyear(currentloans[i2].repayments[currentloans[i2].repayments.length - 1].date) && currentloans[i2].Profit) {
+                    
                     allprofit += currentloans[i2].Profit;
                     CurrentBalance += currentloans[i2].repaid_amount;
+                    removeA(currentloans, currentloans[i2]);
 
                 }
             }
-        }
+       i1++; }
 
     }
-console.log(allloans);
+console.log("Application Id's of all loans:"+allloans);
+console.log("All the profit year round"+allprofit);
+console.log("Balance at the end of the year"+CurrentBalance);
 }
 
 function dateFromDay(year, day) {//gives date from a given day of the year in number i.e. 3 -> Wed Jan 03 2021
@@ -118,7 +121,15 @@ function removeA(arr) { //remove array index of given vallue.
     }
     return arr;
 }
-
+function dayoftheyear(now1){
+    var now = new Date(now1);
+var start = new Date(2021, 0, 0);
+var diff = now - start;
+var oneDay = 1000 * 60 * 60 * 24;
+var day = Math.floor(diff / oneDay);
+// console.log('Day of year: ' + day);
+return day;
+}
 
 
 

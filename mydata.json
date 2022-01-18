@@ -1,0 +1,1172 @@
+[
+   {
+      "application_id": 1,
+      "customer_id": 4558,
+      "principal": 5000,
+      "fee": 1000,
+      "disbursement_date": "2020-04-30",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 6000.0,
+      "installment_amount": 1500.0,
+      "repayments": [
+         {
+            "date": "2020-05-07",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-05-14",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-05-21",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-05-28",
+            "amount": 1500.0
+         }
+      ]
+   },
+   {
+      "application_id": 2,
+      "customer_id": 2567,
+      "principal": 2000,
+      "fee": 300,
+      "disbursement_date": "2020-05-12",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 2300.0,
+      "installment_amount": 575.0,
+      "repayments": [
+         {
+            "date": "2020-05-19",
+            "amount": 575.0
+         },
+         {
+            "date": "2020-05-26",
+            "amount": 575.0
+         },
+         {
+            "date": "2020-06-02",
+            "amount": 575.0
+         },
+         {
+            "date": "2020-06-09",
+            "amount": 575.0
+         }
+      ]
+   },
+   {
+      "application_id": 3,
+      "customer_id": 3729,
+      "principal": 5000,
+      "fee": 1000,
+      "disbursement_date": "2020-03-09",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 6000.0,
+      "installment_amount": 1500.0,
+      "repayments": [
+         {
+            "date": "2020-03-16",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-03-23",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-03-30",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-04-06",
+            "amount": 1500.0
+         }
+      ]
+   },
+   {
+      "application_id": 4,
+      "customer_id": 4184,
+      "principal": 2000,
+      "fee": 300,
+      "disbursement_date": "2020-12-04",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 2300.0,
+      "installment_amount": 575.0,
+      "repayments": [
+         {
+            "date": "2020-12-11",
+            "amount": 575.0
+         },
+         {
+            "date": "2020-12-18",
+            "amount": 575.0
+         },
+         {
+            "date": "2020-12-25",
+            "amount": 575.0
+         },
+         {
+            "date": "2021-01-01",
+            "amount": 575.0
+         }
+      ]
+   },
+   {
+      "application_id": 5,
+      "customer_id": 4457,
+      "principal": 5000,
+      "fee": 1000,
+      "disbursement_date": "2020-12-24",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 6000.0,
+      "installment_amount": 1500.0,
+      "repayments": [
+         {
+            "date": "2020-12-31",
+            "amount": 1500.0
+         },
+         {
+            "date": "2021-01-07",
+            "amount": 1500.0
+         },
+         {
+            "date": "2021-01-14",
+            "amount": 1500.0
+         },
+         {
+            "date": "2021-01-21",
+            "amount": 1500.0
+         }
+      ]
+   },
+   {
+      "application_id": 6,
+      "customer_id": 1673,
+      "principal": 2000,
+      "fee": 300,
+      "disbursement_date": "2020-02-01",
+      "repayment_fraction": 0.0,
+      "repaid_amount": 0.0,
+      "installment_amount": -0.0,
+      "repayments": []
+   },
+   {
+      "application_id": 7,
+      "customer_id": 4170,
+      "principal": 500,
+      "fee": 50,
+      "disbursement_date": "2020-06-02",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 550.0,
+      "installment_amount": 137.0,
+      "repayments": [
+         {
+            "date": "2020-06-09",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-06-16",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-06-23",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-06-30",
+            "amount": 139.0
+         }
+      ]
+   },
+   {
+      "application_id": 8,
+      "customer_id": 3298,
+      "principal": 5000,
+      "fee": 1000,
+      "disbursement_date": "2020-07-28",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 6000.0,
+      "installment_amount": 1500.0,
+      "repayments": [
+         {
+            "date": "2020-08-04",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-08-11",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-08-18",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-08-25",
+            "amount": 1500.0
+         }
+      ]
+   },
+   {
+      "application_id": 9,
+      "customer_id": 4432,
+      "principal": 10000,
+      "fee": 2000,
+      "disbursement_date": "2020-07-14",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 12000.0,
+      "installment_amount": 3000.0,
+      "repayments": [
+         {
+            "date": "2020-07-21",
+            "amount": 3000.0
+         },
+         {
+            "date": "2020-07-28",
+            "amount": 3000.0
+         },
+         {
+            "date": "2020-08-04",
+            "amount": 3000.0
+         },
+         {
+            "date": "2020-08-11",
+            "amount": 3000.0
+         }
+      ]
+   },
+   {
+      "application_id": 10,
+      "customer_id": 2857,
+      "principal": 2000,
+      "fee": 200,
+      "disbursement_date": "2020-08-28",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 2200.0,
+      "installment_amount": 550.0,
+      "repayments": [
+         {
+            "date": "2020-09-04",
+            "amount": 550.0
+         },
+         {
+            "date": "2020-09-11",
+            "amount": 550.0
+         },
+         {
+            "date": "2020-09-18",
+            "amount": 550.0
+         },
+         {
+            "date": "2020-09-25",
+            "amount": 550.0
+         }
+      ]
+   },
+   {
+      "application_id": 11,
+      "customer_id": 730,
+      "principal": 2000,
+      "fee": 200,
+      "disbursement_date": "2020-06-26",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 2200.0,
+      "installment_amount": 550.0,
+      "repayments": [
+         {
+            "date": "2020-07-03",
+            "amount": 550.0
+         },
+         {
+            "date": "2020-07-10",
+            "amount": 550.0
+         },
+         {
+            "date": "2020-07-17",
+            "amount": 550.0
+         },
+         {
+            "date": "2020-07-24",
+            "amount": 550.0
+         }
+      ]
+   },
+   {
+      "application_id": 12,
+      "customer_id": 3846,
+      "principal": 10000,
+      "fee": 2000,
+      "disbursement_date": "2020-02-02",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 12000.0,
+      "installment_amount": 3000.0,
+      "repayments": [
+         {
+            "date": "2020-02-09",
+            "amount": 3000.0
+         },
+         {
+            "date": "2020-02-16",
+            "amount": 3000.0
+         },
+         {
+            "date": "2020-02-23",
+            "amount": 3000.0
+         },
+         {
+            "date": "2020-03-01",
+            "amount": 3000.0
+         }
+      ]
+   },
+   {
+      "application_id": 13,
+      "customer_id": 4538,
+      "principal": 500,
+      "fee": 50,
+      "disbursement_date": "2020-12-28",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 550.0,
+      "installment_amount": 137.0,
+      "repayments": [
+         {
+            "date": "2021-01-04",
+            "amount": 137.0
+         },
+         {
+            "date": "2021-01-11",
+            "amount": 137.0
+         },
+         {
+            "date": "2021-01-18",
+            "amount": 137.0
+         },
+         {
+            "date": "2021-01-25",
+            "amount": 139.0
+         }
+      ]
+   },
+   {
+      "application_id": 14,
+      "customer_id": 4195,
+      "principal": 500,
+      "fee": 50,
+      "disbursement_date": "2020-07-03",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 550.0,
+      "installment_amount": 137.0,
+      "repayments": [
+         {
+            "date": "2020-07-10",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-07-17",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-07-24",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-07-31",
+            "amount": 139.0
+         }
+      ]
+   },
+   {
+      "application_id": 15,
+      "customer_id": 4893,
+      "principal": 1000,
+      "fee": 100,
+      "disbursement_date": "2020-03-31",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 1100.0,
+      "installment_amount": 275.0,
+      "repayments": [
+         {
+            "date": "2020-04-07",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-04-14",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-04-21",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-04-28",
+            "amount": 275.0
+         }
+      ]
+   },
+   {
+      "application_id": 16,
+      "customer_id": 4448,
+      "principal": 1000,
+      "fee": 100,
+      "disbursement_date": "2020-04-15",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 1100.0,
+      "installment_amount": 275.0,
+      "repayments": [
+         {
+            "date": "2020-04-22",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-04-29",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-05-06",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-05-13",
+            "amount": 275.0
+         }
+      ]
+   },
+   {
+      "application_id": 17,
+      "customer_id": 4085,
+      "principal": 1000,
+      "fee": 100,
+      "disbursement_date": "2020-04-02",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 1100.0,
+      "installment_amount": 275.0,
+      "repayments": [
+         {
+            "date": "2020-04-09",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-04-16",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-04-23",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-04-30",
+            "amount": 275.0
+         }
+      ]
+   },
+   {
+      "application_id": 18,
+      "customer_id": 977,
+      "principal": 5000,
+      "fee": 1000,
+      "disbursement_date": "2020-07-04",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 6000.0,
+      "installment_amount": 1500.0,
+      "repayments": [
+         {
+            "date": "2020-07-11",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-07-18",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-07-25",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-08-01",
+            "amount": 1500.0
+         }
+      ]
+   },
+   {
+      "application_id": 19,
+      "customer_id": 2225,
+      "principal": 1000,
+      "fee": 100,
+      "disbursement_date": "2020-04-21",
+      "repayment_fraction": 0.5,
+      "repaid_amount": 550.0,
+      "installment_amount": 137.0,
+      "repayments": [
+         {
+            "date": "2020-04-28",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-05-05",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-05-12",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-05-19",
+            "amount": 139.0
+         }
+      ]
+   },
+   {
+      "application_id": 20,
+      "customer_id": 23,
+      "principal": 2000,
+      "fee": 300,
+      "disbursement_date": "2020-05-16",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 2300.0,
+      "installment_amount": 575.0,
+      "repayments": [
+         {
+            "date": "2020-05-23",
+            "amount": 575.0
+         },
+         {
+            "date": "2020-05-30",
+            "amount": 575.0
+         },
+         {
+            "date": "2020-06-06",
+            "amount": 575.0
+         },
+         {
+            "date": "2020-06-13",
+            "amount": 575.0
+         }
+      ]
+   },
+   {
+      "application_id": 21,
+      "customer_id": 2575,
+      "principal": 2000,
+      "fee": 200,
+      "disbursement_date": "2020-05-24",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 2200.0,
+      "installment_amount": 550.0,
+      "repayments": [
+         {
+            "date": "2020-05-31",
+            "amount": 550.0
+         },
+         {
+            "date": "2020-06-07",
+            "amount": 550.0
+         },
+         {
+            "date": "2020-06-14",
+            "amount": 550.0
+         },
+         {
+            "date": "2020-06-21",
+            "amount": 550.0
+         }
+      ]
+   },
+   {
+      "application_id": 22,
+      "customer_id": 3275,
+      "principal": 500,
+      "fee": 50,
+      "disbursement_date": "2020-07-22",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 550.0,
+      "installment_amount": 137.0,
+      "repayments": [
+         {
+            "date": "2020-07-29",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-08-05",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-08-12",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-08-19",
+            "amount": 139.0
+         }
+      ]
+   },
+   {
+      "application_id": 23,
+      "customer_id": 2744,
+      "principal": 5000,
+      "fee": 1000,
+      "disbursement_date": "2020-05-13",
+      "repayment_fraction": 0.0,
+      "repaid_amount": 0.0,
+      "installment_amount": -0.0,
+      "repayments": []
+   },
+   {
+      "application_id": 24,
+      "customer_id": 1345,
+      "principal": 5000,
+      "fee": 1000,
+      "disbursement_date": "2020-05-31",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 6000.0,
+      "installment_amount": 1500.0,
+      "repayments": [
+         {
+            "date": "2020-06-07",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-06-14",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-06-21",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-06-28",
+            "amount": 1500.0
+         }
+      ]
+   },
+   {
+      "application_id": 25,
+      "customer_id": 4958,
+      "principal": 1000,
+      "fee": 100,
+      "disbursement_date": "2020-10-17",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 1100.0,
+      "installment_amount": 275.0,
+      "repayments": [
+         {
+            "date": "2020-10-24",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-10-31",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-11-07",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-11-14",
+            "amount": 275.0
+         }
+      ]
+   },
+   {
+      "application_id": 26,
+      "customer_id": 1330,
+      "principal": 500,
+      "fee": 50,
+      "disbursement_date": "2020-03-23",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 550.0,
+      "installment_amount": 137.0,
+      "repayments": [
+         {
+            "date": "2020-03-30",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-04-06",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-04-13",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-04-20",
+            "amount": 139.0
+         }
+      ]
+   },
+   {
+      "application_id": 27,
+      "customer_id": 1966,
+      "principal": 500,
+      "fee": 50,
+      "disbursement_date": "2020-08-29",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 550.0,
+      "installment_amount": 137.0,
+      "repayments": [
+         {
+            "date": "2020-09-05",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-09-12",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-09-19",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-09-26",
+            "amount": 139.0
+         }
+      ]
+   },
+   {
+      "application_id": 28,
+      "customer_id": 4359,
+      "principal": 500,
+      "fee": 50,
+      "disbursement_date": "2020-01-10",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 550.0,
+      "installment_amount": 137.0,
+      "repayments": [
+         {
+            "date": "2020-01-17",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-01-24",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-01-31",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-02-07",
+            "amount": 139.0
+         }
+      ]
+   },
+   {
+      "application_id": 29,
+      "customer_id": 2562,
+      "principal": 5000,
+      "fee": 1000,
+      "disbursement_date": "2020-08-24",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 6000.0,
+      "installment_amount": 1500.0,
+      "repayments": [
+         {
+            "date": "2020-08-31",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-09-07",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-09-14",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-09-21",
+            "amount": 1500.0
+         }
+      ]
+   },
+   {
+      "application_id": 30,
+      "customer_id": 4307,
+      "principal": 500,
+      "fee": 50,
+      "disbursement_date": "2020-12-22",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 550.0,
+      "installment_amount": 137.0,
+      "repayments": [
+         {
+            "date": "2020-12-29",
+            "amount": 137.0
+         },
+         {
+            "date": "2021-01-05",
+            "amount": 137.0
+         },
+         {
+            "date": "2021-01-12",
+            "amount": 137.0
+         },
+         {
+            "date": "2021-01-19",
+            "amount": 139.0
+         }
+      ]
+   },
+   {
+      "application_id": 31,
+      "customer_id": 1206,
+      "principal": 1000,
+      "fee": 100,
+      "disbursement_date": "2020-08-08",
+      "repayment_fraction": 0.75,
+      "repaid_amount": 825.0,
+      "installment_amount": 206.0,
+      "repayments": [
+         {
+            "date": "2020-08-15",
+            "amount": 206.0
+         },
+         {
+            "date": "2020-08-22",
+            "amount": 206.0
+         },
+         {
+            "date": "2020-08-29",
+            "amount": 206.0
+         },
+         {
+            "date": "2020-09-05",
+            "amount": 207.0
+         }
+      ]
+   },
+   {
+      "application_id": 32,
+      "customer_id": 3390,
+      "principal": 10000,
+      "fee": 2000,
+      "disbursement_date": "2020-03-29",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 12000.0,
+      "installment_amount": 3000.0,
+      "repayments": [
+         {
+            "date": "2020-04-05",
+            "amount": 3000.0
+         },
+         {
+            "date": "2020-04-12",
+            "amount": 3000.0
+         },
+         {
+            "date": "2020-04-19",
+            "amount": 3000.0
+         },
+         {
+            "date": "2020-04-26",
+            "amount": 3000.0
+         }
+      ]
+   },
+   {
+      "application_id": 33,
+      "customer_id": 3265,
+      "principal": 2000,
+      "fee": 200,
+      "disbursement_date": "2020-07-27",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 2200.0,
+      "installment_amount": 550.0,
+      "repayments": [
+         {
+            "date": "2020-08-03",
+            "amount": 550.0
+         },
+         {
+            "date": "2020-08-10",
+            "amount": 550.0
+         },
+         {
+            "date": "2020-08-17",
+            "amount": 550.0
+         },
+         {
+            "date": "2020-08-24",
+            "amount": 550.0
+         }
+      ]
+   },
+   {
+      "application_id": 34,
+      "customer_id": 2603,
+      "principal": 1000,
+      "fee": 100,
+      "disbursement_date": "2020-06-15",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 1100.0,
+      "installment_amount": 275.0,
+      "repayments": [
+         {
+            "date": "2020-06-22",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-06-29",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-07-06",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-07-13",
+            "amount": 275.0
+         }
+      ]
+   },
+   {
+      "application_id": 35,
+      "customer_id": 1932,
+      "principal": 1000,
+      "fee": 100,
+      "disbursement_date": "2020-08-29",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 1100.0,
+      "installment_amount": 275.0,
+      "repayments": [
+         {
+            "date": "2020-09-05",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-09-12",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-09-19",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-09-26",
+            "amount": 275.0
+         }
+      ]
+   },
+   {
+      "application_id": 36,
+      "customer_id": 1811,
+      "principal": 10000,
+      "fee": 2000,
+      "disbursement_date": "2020-12-16",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 12000.0,
+      "installment_amount": 3000.0,
+      "repayments": [
+         {
+            "date": "2020-12-23",
+            "amount": 3000.0
+         },
+         {
+            "date": "2020-12-30",
+            "amount": 3000.0
+         },
+         {
+            "date": "2021-01-06",
+            "amount": 3000.0
+         },
+         {
+            "date": "2021-01-13",
+            "amount": 3000.0
+         }
+      ]
+   },
+   {
+      "application_id": 37,
+      "customer_id": 2771,
+      "principal": 5000,
+      "fee": 1000,
+      "disbursement_date": "2020-12-09",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 6000.0,
+      "installment_amount": 1500.0,
+      "repayments": [
+         {
+            "date": "2020-12-16",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-12-23",
+            "amount": 1500.0
+         },
+         {
+            "date": "2020-12-30",
+            "amount": 1500.0
+         },
+         {
+            "date": "2021-01-06",
+            "amount": 1500.0
+         }
+      ]
+   },
+   {
+      "application_id": 38,
+      "customer_id": 3015,
+      "principal": 1000,
+      "fee": 100,
+      "disbursement_date": "2020-12-14",
+      "repayment_fraction": 0.75,
+      "repaid_amount": 825.0,
+      "installment_amount": 206.0,
+      "repayments": [
+         {
+            "date": "2020-12-21",
+            "amount": 206.0
+         },
+         {
+            "date": "2020-12-28",
+            "amount": 206.0
+         },
+         {
+            "date": "2021-01-04",
+            "amount": 206.0
+         },
+         {
+            "date": "2021-01-11",
+            "amount": 207.0
+         }
+      ]
+   },
+   {
+      "application_id": 39,
+      "customer_id": 2341,
+      "principal": 1000,
+      "fee": 100,
+      "disbursement_date": "2020-10-07",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 1100.0,
+      "installment_amount": 275.0,
+      "repayments": [
+         {
+            "date": "2020-10-14",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-10-21",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-10-28",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-11-04",
+            "amount": 275.0
+         }
+      ]
+   },
+   {
+      "application_id": 40,
+      "customer_id": 2042,
+      "principal": 1000,
+      "fee": 100,
+      "disbursement_date": "2020-07-04",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 1100.0,
+      "installment_amount": 275.0,
+      "repayments": [
+         {
+            "date": "2020-07-11",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-07-18",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-07-25",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-08-01",
+            "amount": 275.0
+         }
+      ]
+   },
+   {
+      "application_id": 41,
+      "customer_id": 2175,
+      "principal": 1000,
+      "fee": 100,
+      "disbursement_date": "2020-03-19",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 1100.0,
+      "installment_amount": 275.0,
+      "repayments": [
+         {
+            "date": "2020-03-26",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-04-02",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-04-09",
+            "amount": 275.0
+         },
+         {
+            "date": "2020-04-16",
+            "amount": 275.0
+         }
+      ]
+   },
+   {
+      "application_id": 42,
+      "customer_id": 3838,
+      "principal": 10000,
+      "fee": 2000,
+      "disbursement_date": "2020-12-23",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 12000.0,
+      "installment_amount": 3000.0,
+      "repayments": [
+         {
+            "date": "2020-12-30",
+            "amount": 3000.0
+         },
+         {
+            "date": "2021-01-06",
+            "amount": 3000.0
+         },
+         {
+            "date": "2021-01-13",
+            "amount": 3000.0
+         },
+         {
+            "date": "2021-01-20",
+            "amount": 3000.0
+         }
+      ]
+   },
+   {
+      "application_id": 43,
+      "customer_id": 1477,
+      "principal": 500,
+      "fee": 50,
+      "disbursement_date": "2020-09-19",
+      "repayment_fraction": 1.0,
+      "repaid_amount": 550.0,
+      "installment_amount": 137.0,
+      "repayments": [
+         {
+            "date": "2020-09-26",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-10-03",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-10-10",
+            "amount": 137.0
+         },
+         {
+            "date": "2020-10-17",
+            "amount": 139.0
+         }
+      ]
+   }
+]
